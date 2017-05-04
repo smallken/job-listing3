@@ -55,7 +55,7 @@
         <hr class="section-heading-spacer">
         <div class="clearfix"></div>
         <h2 class="section-heading">想要兼职？</h2>
-        <p class="lead">这里有大量的价值工作<br>来吧!</p>
+        <p class="lead">这里有大量的兼职工作<br>来吧!</p>
       </div>
       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
         <%= image_tag 'pic-6.jpg', class: 'img-responsive' %>
@@ -64,7 +64,7 @@
   </div>
 </div>
 <p>
-
+     <!-- 热门职位 -->
   <section id="genius" class="our-experts">
           <div class="container">
             <div class="col-md-8 col-md-offset-2">
@@ -78,42 +78,39 @@
                   <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-3 category-list">
-                          <a class="category_1" href="/jobs?category=%E6%8A%80%E6%9C%AF">
+
                             <div class="expert-box">
                                 <img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff4yg00tjgj301s01sa9u.jpg" alt="Category 01">
                             </div>
                             <div>
-                              <h3>教练</h3>
+                              <%= link_to"教练", jobs_path(:category => "教练") %>
                               <p>Coach</p>
                             </div>
 </a>                        </div>
                         <div class="col-md-3 category-list">
-                          <a class="category_2" href="/jobs?category=%E4%BA%A7%E5%93%81">
                             <div class="expert-box">
                                 <img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff4ya1h688j301s01sjr6.jpg" alt="Category 02">
                             </div>
                             <div>
-                              <h3>俱乐部经理</h3>
+                              <%= link_to("俱乐部经理", jobs_path(:category => "俱乐部经理")) %>
                               <p>Club Manager</p>
                             </div>
 </a>                        </div>
                         <div class="col-md-3 category-list">
-                          <a class="category_3" href="/jobs?category=%E8%AE%BE%E8%AE%A1">
                             <div class="expert-box">
                                 <img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff4yi1agy6j301s01sa9t.jpg" alt="Category 03">
                             </div>
                             <div>
-                              <h3>足球宝贝</h3>
+                              <%= link_to("足球宝贝", jobs_path(:category => "足球宝贝")) %>
                               <p>Football girl</p>
                             </div>
 </a>                        </div>
                         <div class="col-md-3 category-list">
-                          <a class="category_4" href="/jobs?category=%E8%BF%90%E8%90%A5">
                             <div class="expert-box">
                                 <img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff4yky9saoj301s01sgld.jpg" alt="Category 04">
                             </div>
                             <div>
-                              <h3>球探</h3>
+                            <%= link_to("球探", jobs_path(:category => "球探")) %>
                               <p>Scout</p>
                             </div>
 </a>                        </div>
@@ -161,6 +158,7 @@
     </div>
   </div>
 </section>
+
 
 </body>
 </html>

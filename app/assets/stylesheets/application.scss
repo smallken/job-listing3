@@ -19,13 +19,21 @@
  @import "bootstrap";
  @import "font-awesome";
 
+ // Place all the styles related to the welcome controller here.
+ // They will automatically be included in application.css.
+ // You can use Sass (SCSS) here: http://sass-lang.com/
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,600,500,300,200,100,800);
+ @import url(https://fonts.googleapis.com/css?family=Lobster);
+ @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+ /*@import url(https://fonts.googleapis.com/css?family=Playball);*/
+ 
  .jumbotron {
-   background-image:url("http://ww3.sinaimg.cn/large/006tNbRwgy1fevimpx4juj30kw0dcgn8.jpg");
+   background-image:url("http://ww1.sinaimg.cn/large/006tNc79gy1ff6f5z2du1j30zk0npk1r.jpg");
    background-repeat: no-repeat;
-   background-size: cover;
+   background-attachment: fixed;
    padding-bottom: 110px;
    margin-left: 200px;
-
  }
 
  .index-title{
@@ -50,12 +58,12 @@
 .jumbotron p {
    margin: 0;//上下左右margin为0
 
-   font-size: 28px;//字体大小
+   font-size: 35px;//字体大小
    max-width: 500px;//最大宽度
    background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
    padding: 50px;//上下左右padding为20px
    text-align:left;//文字左对齐
-   color: #222;//字体颜色
+   color: #0a0a0a;//字体颜色
 
    border-bottom-right-radius: 3px;//右下角圆边
    border-bottom-left-radius: 3px;//左下角圆边
@@ -109,7 +117,6 @@
 
      border-color: #212121; //边框色
 
-     margin-bottom: 0; //底部 margin 不撑开距离
  }
 
 
@@ -173,6 +180,7 @@
      padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
      margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
      border-radius: 0;//圆角为0
+     margin-top: -20px;
    }
 
    .title {
@@ -383,4 +391,11 @@
     footer .footer-below {
         padding: 25px 0;
         background-color: #233140;
+    }
+
+    //--------Commom--------
+    .col-centered{
+      float:  none;
+      margin: 0 auto;
+
     }

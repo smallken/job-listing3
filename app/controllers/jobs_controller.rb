@@ -4,13 +4,24 @@ class JobsController < ApplicationController
 
 
   def index
-    @jobs = case params[:order]
+
+    @jobs = Job.published
+
+    if params[:category].present?
+      @category = params[:category]
+      @jobs = @jobs.where(:category => @category)
+
+    end
+
+
+
+   @jobs = case params[:order]
               when 'by_lower_bound'
-              Job.published.order('wage_lower_bound DESC')
+            @jobs.order('wage_lower_bound DESC')
               when 'by_upper_bound'
-              Job.published.order('wage_upper_bound DESC')
+              @jobs.order('wage_upper_bound DESC')
               else
-              Job.published.recent
+              @jobs.recent
             end
   end
 
