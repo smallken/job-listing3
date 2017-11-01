@@ -7,7 +7,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  def admin?
-    is_admin
-  end
 end
