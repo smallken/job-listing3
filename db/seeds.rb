@@ -26,3 +26,10 @@ create_jobs = for i in 1..10 do
   Job.create!([title: "#{i}#{c}" , category: c , description: "這是用種子建立的第 #{i} 個Public工作", wage_upper_bound: rand(50..99)*100, wage_lower_bound: rand(10..49)*100, is_hidden: "false"])
 end
 puts "10 Hidden jobs create"
+
+u = User.new
+u.email = "admin@test.com"
+u.password = "123456"
+u.password_confirmation = "123456"
+u.is_admin = true
+u.save
